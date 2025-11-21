@@ -35,12 +35,42 @@ h1 {
     font-weight: bolder;
 }
 
+/* === Contact / About Image Style === */
 .contact-image {
-    min-width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    margin-bottom: 1rem;
+  width: 330px;                /* Balanced size for large screens */
+  height: 330px;
+  object-fit: cover;           /* Keeps proportions, avoids stretching */
+  border-radius: 50%;          /* Makes image circular */
+  border: 3px solid #1f1f1f;   /* Subtle dark border to blend with theme */
+  box-shadow: 0 0 25px rgba(0, 255, 140, 0.15); /* Soft neon glow effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #111;      /* Fallback for slow-loading images */
 }
+
+/* Hover Effect */
+.contact-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(0, 255, 140, 0.35);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .contact-image {
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-image {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 15px;
+  }
+}
+
 
 .contact-paragraph {
     font-size: 1.25rem;

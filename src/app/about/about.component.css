@@ -1,13 +1,148 @@
-@import '../../styles.css';
+/* ===== GENERAL DARK THEME ===== */
+body {
+  background-color: #0d1117;
+  color: #c9d1d9;
+  font-family: 'Poppins', sans-serif;
+}
 
-  @media (max-width: 768px) {
-    .about-picture {
-      width: 250px;
-    }
+.default-container {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.default-topic {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 25px;
+}
+
+.default-p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #a7b0bc;
+  margin-bottom: 18px;
+}
+
+.default-highlight {
+  color: #1fdf64;
+  font-weight: 600;
+}
+
+/* ===== IMAGE STYLES ===== */
+.about-img {
+  width: 330px;
+  height: 330px;
+  object-fit: cover;
+  border: 4px solid #1fdf64;
+  border-radius: 50%;
+  box-shadow: 0 0 25px rgba(31, 223, 100, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-side-img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 15px;
+  border: 2px solid #1fdf64;
+  object-fit: cover;
+  box-shadow: 0 0 25px rgba(31, 223, 100, 0.15);
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-img:hover,
+.about-side-img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== BLOCK SPACING ===== */
+.about-block {
+  margin-bottom: 100px;
+}
+
+/* ===== BUTTONS ===== */
+.btn-green {
+  background-color: #1fdf64;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.btn-green:hover {
+  background-color: #17b851;
+}
+
+.a-green {
+  text-decoration: none;
+  color: #0d1117;
+  font-weight: 600;
+}
+
+/* ===== MEDIA QUERIES ===== */
+@media (max-width: 992px) {
+  .about-img {
+    width: 200px;
+    height: 200px;
   }
-  
-  .about-picture{
-    max-width: 100%;
-    /* height: 400px !important; */
-    margin: 0.5rem 0rem 2rem 0rem;
+  .about-side-img {
+    max-width: 300px;
   }
+  .about-block {
+    margin-bottom: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .default-topic {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+
+  .default-p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  .about-block {
+    flex-direction: column !important;
+    text-align: center;
+    margin-bottom: 70px;
+  }
+
+  .about-img {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 20px;
+  }
+
+  .about-side-img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 20px;
+  }
+
+  .reach-out {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .default-container {
+    padding: 30px 10px;
+  }
+
+  .default-topic {
+    font-size: 1.4rem;
+  }
+
+  .about-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .about-side-img {
+    max-width: 260px;
+  }
+}
